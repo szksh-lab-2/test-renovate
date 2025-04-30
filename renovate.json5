@@ -5,12 +5,4 @@
     'github>suzuki-shunsuke/renovate-config#3.1.0',
     'github>aquaproj/aqua-renovate-config#2.7.5',
   ],
-  packageRules: [
-    {
-      matchPackageNames: [
-        "/.*/",
-      ],
-      minimumReleaseAge: "3 days",
-    },
-  ],
 }
