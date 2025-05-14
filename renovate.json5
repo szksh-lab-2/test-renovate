@@ -1,6 +1,6 @@
 {
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
+  $schema: 'https://docs.renovatebot.com/renovate-schema.json',
+  extends: [
     'github>suzuki-shunsuke/renovate-config:nolimit#3.1.0',
     'github>suzuki-shunsuke/renovate-config#3.1.0',
     'github>aquaproj/aqua-renovate-config#2.7.5',
@@ -9,31 +9,31 @@
     {
       allowedVersions: '/^wash-v/',
       matchFileNames: [
-        "**/aqua.yaml"
+        '**/aqua.yaml',
       ],
       matchDepNames: [
         'wasmCloud/wasmCloud/wash',
       ],
     },
   ],
-   "customManagers": [
-        {
-         "customType": "regex",
-         "datasourceTemplate": "github-releases",
-         "depNameTemplate": "wasmCloud/wasmCloud/wash",
-         "extractVersionTemplate": "^wash-v(?<version>.*)$",
-         "fileMatch": [
-            "\\.?aqua\\.ya?ml"
-         ],
-         "matchStrings": [
-            " +(?:version|'version'|\"version\") *: +wash-v(?<currentValue>[^'\" \\n]+) +# renovate: depName=wasmCloud/wasmCloud/wash[ \\n]",
-            " +(?:version|'version'|\"version\") *: +'wash-v(?<currentValue>[^'\" \\n]+)' +# renovate: depName=wasmCloud/wasmCloud/wash[ \\n]",
-            " +(?:version|'version'|\"version\") *: +\"wash-v(?<currentValue>[^'\" \\n]+)\" +# renovate: depName=wasmCloud/wasmCloud/wash[ \\n]",
-            " +(?:name|'name'|\"name\") *: +wasmCloud/wasmCloud/wash@wash-v(?<currentValue>[^'\" \\n]+)",
-            " +(?:name|'name'|\"name\") *: +'wasmCloud/wasmCloud/wash@wash-v(?<currentValue>[^'\" \\n]+)'",
-            " +(?:name|'name'|\"name\") *: +\"wasmCloud/wasmCloud/wash@wash-v(?<currentValue>[^'\" \\n]+)\""
-         ],
-         "packageNameTemplate": "wasmCloud/wasmCloud"
-      }
-   ]
+  customManagers: [
+    {
+      customType: 'regex',
+      datasourceTemplate: 'github-releases',
+      depNameTemplate: 'wasmCloud/wasmCloud/wash',
+      extractVersionTemplate: '^wash-v(?<version>.*)$',
+      managerFilePatterns: [
+        '/\\.?aqua\\.ya?ml/',
+      ],
+      matchStrings: [
+        ' +(?:version|\'version\'|"version") *: +wash-v(?<currentValue>[^\'" \\n]+) +# renovate: depName=wasmCloud/wasmCloud/wash[ \\n]',
+        " +(?:version|'version'|\"version\") *: +'wash-v(?<currentValue>[^'\" \\n]+)' +# renovate: depName=wasmCloud/wasmCloud/wash[ \\n]",
+        ' +(?:version|\'version\'|"version") *: +"wash-v(?<currentValue>[^\'" \\n]+)" +# renovate: depName=wasmCloud/wasmCloud/wash[ \\n]',
+        ' +(?:name|\'name\'|"name") *: +wasmCloud/wasmCloud/wash@wash-v(?<currentValue>[^\'" \\n]+)',
+        " +(?:name|'name'|\"name\") *: +'wasmCloud/wasmCloud/wash@wash-v(?<currentValue>[^'\" \\n]+)'",
+        ' +(?:name|\'name\'|"name") *: +"wasmCloud/wasmCloud/wash@wash-v(?<currentValue>[^\'" \\n]+)"',
+      ],
+      packageNameTemplate: 'wasmCloud/wasmCloud',
+    },
+  ],
 }
