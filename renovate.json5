@@ -5,6 +5,17 @@
     'github>suzuki-shunsuke/renovate-config#3.1.0',
     'github>aquaproj/aqua-renovate-config#2.7.5',
   ],
+  packageRules: [
+    {
+      allowedVersions: '/^wash-v/',
+      matchFileNames: [
+        "**/aqua.yaml"
+      ],
+      matchDepNames: [
+        'wasmCloud/wasmCloud/wash',
+      ],
+    },
+  ],
    "customManagers": [
         {
          "customType": "regex",
