@@ -5,4 +5,24 @@
     'github>suzuki-shunsuke/renovate-config#3.1.0',
     'github>aquaproj/aqua-renovate-config#2.7.5',
   ],
+   "customManagers": [
+        {
+         "customType": "regex",
+         "datasourceTemplate": "github-releases",
+         "depNameTemplate": "wasmCloud/wasmCloud/wash",
+         "extractVersionTemplate": "^wash-v(?<version>.*)$",
+         "fileMatch": [
+            "\\.?aqua\\.ya?ml"
+         ],
+         "matchStrings": [
+            " +(?:version|'version'|\"version\") *: +wash-v(?<currentValue>[^'\" \\n]+) +# renovate: depName=wasmCloud/wasmCloud/wash[ \\n]",
+            " +(?:version|'version'|\"version\") *: +'wash-v(?<currentValue>[^'\" \\n]+)' +# renovate: depName=wasmCloud/wasmCloud/wash[ \\n]",
+            " +(?:version|'version'|\"version\") *: +\"wash-v(?<currentValue>[^'\" \\n]+)\" +# renovate: depName=wasmCloud/wasmCloud/wash[ \\n]",
+            " +(?:name|'name'|\"name\") *: +wasmCloud/wasmCloud/wash@wash-v(?<currentValue>[^'\" \\n]+)",
+            " +(?:name|'name'|\"name\") *: +'wasmCloud/wasmCloud/wash@wash-v(?<currentValue>[^'\" \\n]+)'",
+            " +(?:name|'name'|\"name\") *: +\"wasmCloud/wasmCloud/wash@wash-v(?<currentValue>[^'\" \\n]+)\""
+         ],
+         "packageNameTemplate": "wasmCloud/wasmCloud"
+      }
+   ]
 }
