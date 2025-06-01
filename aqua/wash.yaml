@@ -1,5 +1,5 @@
 packages:
   - name: wasmCloud/wasmCloud/wash@wash-v0.41.0
   - name: suzuki-shunsuke/pinact@v2.0.0
-  - name: bitwarden/clients@cli-v2025.4.0
+  - name: bitwarden/clients@cli-v2025.5.0
   - name: mongodb/mongodb-atlas-cli/atlascli@atlascli/v1.42.2
