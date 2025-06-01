@@ -13,4 +13,5 @@ registries:
 packages:
   - name: wasmCloud/wasmCloud/wash@wash-v0.41.0
   - name: suzuki-shunsuke/pinact@v2.0.0
+  - name: bitwarden/clients@cli-v2025.4.0
   - import: aqua/wash.yaml
