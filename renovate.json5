@@ -3,8 +3,7 @@
   "extends": [
     'github>suzuki-shunsuke/renovate-config:nolimit#3.1.0',
     'github>suzuki-shunsuke/renovate-config#3.1.0',
-    // github>abc/foo//path/xyz#1.2.3
     'github>aquaproj/aqua-renovate-config#fix-file-pattern',
-    'github>aquaproj/aqua-renovate-config:file#fix-file-pattern(/aqua/.*\\.ya?ml/)',
+    'github>aquaproj/aqua-renovate-config:file#fix-file-pattern(aqua/.*\\.ya?ml)',
   ],
 }

@@ -12,4 +12,5 @@ registries:
     ref: v4.374.0 # renovate: depName=aquaproj/aqua-registry
 packages:
   - name: wasmCloud/wasmCloud/wash@wash-v0.41.0
+  - name: suzuki-shunsuke/pinacr@v2.0.0
   - import: aqua/wash.yaml
