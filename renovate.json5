@@ -1,7 +1,7 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    'github>suzuki-shunsuke/renovate-config:nolimit#3.1.0',
+    'github>suzuki-shunsuke/renovate-config:nolimit#3.2.1',
   ],
    "customManagers": [
       {
