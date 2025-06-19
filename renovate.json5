@@ -2,31 +2,7 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     'github>suzuki-shunsuke/renovate-config:nolimit#3.1.0',
+    'github>aquaproj/aqua-renovate-config#2.8.1',
+    'github>aquaproj/aqua-renovate-config:file(aqua/gh\\.yaml)#2.8.1',
   ],
-   "customManagers": [
-      {
-         "customType": "regex",
-         "datasourceTemplate": "github-releases",
-         "depNameTemplate": "wasmCloud/wasmCloud/wash",
-         "extractVersionTemplate": "^wash-v(?<version>.*)$",
-         "managerFilePatterns": [
-            "/\\.?aqua\\.ya?ml$/"
-         ],
-         "matchStrings": [
-            " +name: +wasmCloud/wasmCloud/wash@wash-v(?<currentValue>[^'\" \\n]+)",
-         ],
-         "packageNameTemplate": "wasmCloud/wasmCloud"
-      } 
-   ],
-   "packageRules": [
-      {
-         "allowedVersions": "/^wash-v/",
-         "matchDepNames": [
-            "wasmCloud/wasmCloud/wash"
-         ],
-         "matchFileNames": [
-            "**/aqua.yaml",
-         ]
-      },
-   ],
 }
