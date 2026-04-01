@@ -87,6 +87,12 @@
            "**/aqua.yaml",
            "**/aqua.yml"
         ]
+     },
+     {
+        "matchPackageNames": [
+           "ryan-pip/dbt-fusion-versions"
+        ],
+        "versioning": "semver"
      }
     ]
 }
