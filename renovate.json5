@@ -92,7 +92,8 @@
         "matchPackageNames": [
            "ryan-pip/dbt-fusion-versions"
         ],
-        "versioning": "semver"
+        "versioning": "semver",
+        "changelogUrl": "https://github.com/dbt-labs/dbt-fusion/blob/main/CHANGELOG.md"
      }
     ]
 }
