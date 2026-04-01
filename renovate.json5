@@ -24,5 +24,69 @@
      ],
      "packageNameTemplate": "ryan-pip/dbt-fusion-versions"
   }
-  ]
+  ],
+  "packageRules": [
+     {
+        "enabled": false,
+        "matchDatasources": [
+           "github-releases"
+        ],
+        "matchDepNames": [
+           "golang/go",
+           "golang/tools",
+           "kubernetes/kubectl",
+           "twistedpair/google-cloud-sdk",
+           "awslabs/mountpoint-s3",
+           "aws/aws-cli",
+           "catenacyber/perfsprint",
+           "golang/vuln/govulncheck",
+           "anthropics/claude-code",
+           "apache/ant",
+           "getdbt.com/dbt-fusion"
+        ],
+        "matchFileNames": [
+           "**/.aqua.yaml",
+           "**/.aqua.yml",
+           "**/aqua.yaml",
+           "**/aqua.yml"
+        ]
+     },
+     {
+        "enabled": false,
+        "matchDatasources": [
+           "github-tags"
+        ],
+        "matchFileNames": [
+           "**/.aqua.yaml",
+           "**/.aqua.yml",
+           "**/aqua.yaml",
+           "**/aqua.yml"
+        ]
+     },
+     {
+        "enabled": true,
+        "matchDatasources": [
+           "github-tags"
+        ],
+        "matchDepNames": [
+           "golang/go",
+           "golang/tools",
+           "kubernetes/kubectl",
+           "twistedpair/google-cloud-sdk",
+           "awslabs/mountpoint-s3",
+           "aws/aws-cli",
+           "catenacyber/perfsprint",
+           "golang/vuln/govulncheck",
+           "anthropics/claude-code",
+           "apache/ant",
+           "getdbt.com/dbt-fusion"
+        ],
+        "matchFileNames": [
+           "**/.aqua.yaml",
+           "**/.aqua.yml",
+           "**/aqua.yaml",
+           "**/aqua.yml"
+        ]
+     }
+    ]
 }
