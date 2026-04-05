@@ -14,6 +14,6 @@ packages:
   - name: cli/cli@v2.0.0
   # github-tags
   # ryan-pip/dbt-fusion-versions
-  - name: getdbt.com/dbt-fusion@v2.0.0-preview.100
+  - name: getdbt.com/dbt-fusion@v2.0.0-preview.165
   - name: getdbt.com/dbt-fusion
     version: v2.0.0-preview.100 # depName=ryan-pip/dbt-fusion-versions
